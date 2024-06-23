@@ -44,3 +44,11 @@ def play_game():
 
         winner = check_winner(board)
         current_player = 'O' if current_player == 'X' else 'X'
+         print_board(board)
+    if winner:
+        print(f"Player {winner} wins!")
+    else:
+        print("It's a tie!")
+
+if name == "main":
+    play_game()
