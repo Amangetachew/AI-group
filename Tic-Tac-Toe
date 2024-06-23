@@ -35,3 +35,12 @@ def play_game():
                 row = int(input("Enter the row (0, 1, 2): "))
                 col = int(input("Enter the column (0, 1, 2): "))
                 if row in range(3) and col in range(3) and board[row][col] == ' ':
+                      board[row][col] = current_player
+                    break
+                else:
+                    print("Invalid move. Try again.")
+            except ValueError:
+                print("Please enter a number.")
+
+        winner = check_winner(board)
+        current_player = 'O' if current_player == 'X' else 'X'
